@@ -1,4 +1,5 @@
-import react from  'react'
+import React from  'react';
+import {Apple, Search, User, ShoppingCart} from 'lucide-react';
 
 
 function App() {
@@ -16,15 +17,17 @@ function App() {
     <div className="bg-purple-400 min-h-screen">
       
       {/* Header section */}
-      <header className="bg-white  p-8">
-        <div className="flex justify-around ml-2 mr-3.5 items-centre max-w-6xl mx-auto">
+      <header className="bg-white  p-6">
+        <div className="flex justify-between items-centre max-w-9xl mx-auto ">
           {/* App Title */}
-          <h1 className="font-semibold text-xl text-blacktracking-wide">
-            GADGET STORE KE
-          </h1>
-
+          <div className="flex gap-1">
+            <Apple className="w-8 h-8 text-black" />
+            <h1 className="font-semibold text-2xl tracking-wide text-black ">
+              GADGET STORE KE </h1>
+          </div>
+          
           {/* Navigation Links */}
-          <nav className="space-x-8 text-shadow-lg flex">
+          <nav className="space-x-10 text-xl text-shadow-lg flex mask-b-from-neutral-100">
             <a href="#home" className="hover:text-amber-300">Store</a>
             <a href="#about" className="hover:text-amber-300">Featured</a>
             <a href="#resources" className="hover:text-amber-300">Accessories</a>
