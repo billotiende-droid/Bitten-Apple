@@ -17,7 +17,7 @@ function App() {
     <div className="bg-purple-400 min-h-screen">
       
       {/* Header section */}
-      <header className="bg-white  p-6">
+      <header className="bg-gray-200 p-6">
         <div className="flex justify-between items-centre max-w-9xl mx-auto ">
           {/* App Title */}
           <div className="flex gap-1">
@@ -27,18 +27,27 @@ function App() {
           </div>
           
           {/* Navigation Links */}
-          <nav className="space-x-10 text-xl text-shadow-lg flex mask-b-from-neutral-100">
-            <a href="#home" className="hover:text-amber-300">Store</a>
-            <a href="#about" className="hover:text-amber-300">Featured</a>
-            <a href="#resources" className="hover:text-amber-300">Accessories</a>
-             <a href="#resources" className="hover:text-amber-300">Experience</a>
-              <a href="#resources" className="hover:text-amber-300">Support</a>
+          <nav className="hidden md:flex space-x-10 mask-b-from-neutral-100 font-semibold">
+            <a href="#home" className="hover:text-blue-300">Store</a>
+            <a href="#about" className="hover:text-blue-300">Featured</a>
+            <a href="#resources" className="hover:text-blue-300">Accessories</a>
+             <a href="#resources" className="hover:text-blue-300">Experience</a>
+              <a href="#resources" className="hover:text-blue-300">Support</a>
           </nav>
 
-          {/* Get Started Button */}
-          <button className="bg-amber-300 text-black font-semibold px-4 py-2 rounded-lg hover:bg-amber-400 transition flex-end">
-            Get Started
-          </button>
+          {/* search User Cart Icons */}
+          <div className="flex items-center gap-6" >
+            <Search className="cursor-pointer hover:textamber-300" />
+            <User className="cursor-pointer hover:text-amber-300" />
+
+            <button className="flex items-center gap-2 bg-amber-300 text-black font-semibold px-4 py-2 rounded-lg hover:bg-amber-400 transition ">
+              <ShoppingCart className="w-5 h-5" />
+              <span>Cart</span>
+            </button>
+            
+
+          </div>
+          
         </div>
       </header>
 
