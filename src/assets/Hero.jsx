@@ -1,4 +1,4 @@
-import { Sparkles, ChevronDown, Search, Filter, Grid, List} from 'lucide-react';
+import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail} from 'lucide-react';
 
 function Hero() {
 
@@ -27,6 +27,29 @@ function Hero() {
                             From flagship powerhouses with pro-grade cameras to sleek everyday essentials, 
                             discover innovation that fits your style and budget.
                             </p>
+                            {/* Store info*/}
+                            <div className='mb-10'>
+                                <div className='bg-white/90  backdrop-blur-sm  rounded-2xl p-6 shadow-lg'>
+                                    <h3 className='text-slate-900 mb-4'>Visit Our Store.</h3> 
+
+                                    <div className='space-y-4'>
+                                        <div className='flex items-start gap-3'>
+                                            <div className='bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                                <MapPin className='w-5 h-5 text-blue-600' />
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                
+                                
+                                </div>
+
+
+
+                            </div>
+
+                        
 
                         </div>
 
