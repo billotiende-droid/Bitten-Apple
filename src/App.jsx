@@ -6,11 +6,14 @@ function App() {
 
  return (
     // Main container for the entire app
-    <div className="min-h-screen bg-gradient-to-br: from-blue-900 via-indigo-800 to-amber-700">
+    <div className="min-h-screen bg-cover bg-center bg-fixed bg-no-repeat"
+    style={{ backgroundImage: "url('/img/blue-gold-wallpaper.jpg')" }}
+    
+    >
       <Header />
      
       {/* Main content area */}
-      <main className="flex flex-col md:flex-row gap-4 p-6">
+      <main className="max-w-6xl mx-auto px-4 py-10">
         
         {/* Left section — Bot Collection display */}
         <div className="flex-1">
