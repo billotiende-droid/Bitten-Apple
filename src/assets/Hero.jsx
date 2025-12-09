@@ -45,7 +45,7 @@ function Hero() {
                                             </div>
                                             <div>
                                                 <p className='text-slate-900'>Kimathi Chambers, 2nd Floor</p>
-                                                <p className='text-slate-600'>Kimathi Street, Moi Avenue, Nairobi, Kenya 00100</p>
+                                                <p className='text-slate-600'>Kimathi Street, Moi Avenue, Nairobi Kenya 00100</p>
                                             </div>
                                         </div>
 
@@ -59,15 +59,50 @@ function Hero() {
                                                 <p className='text-slate-600'>Saturday: 9:00 AM - 12:00 PM</p>
                                             </div>
                                         </div>
-
+                                        <div className='flex items-start gap-3'>
+                                            <div className='bg-purple-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                                <Phone className='w-5 h-5 text-purple-600' />
+                                            </div>
+                                            <div>
+                                                <p className='text-slate-900'>0708-797-926 </p>
+                                                <p className='text-slate-600'>Call us for expert advice</p>
+                                            </div>
+                                        </div>
+                                        <div className='flex items-start gap-3'>
+                                            <div className='bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                                <Mail className='w-5 h-5 text-green-600' />
+                                            </div>
+                                            <div>
+                                                <p className='text-slate-900'>hello@gadgetstore.com</p>
+                                                <p className='text-slate-600'>Get in touch with our team</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <div className='flex gap-4 flex-wrap mb-8'>
+                                <button className='bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5'>
+                                    Shop Now
+                                </button>
+                                <button className='bg-white/90 backdrop-blur-sm text-slate-900 px-8 py-4 rounded-full hover:bg-white transition-all shadow-md'>
+                                    View Collection
+                                </button>
+                                <button className='bg-white/90 backdrop-blur-sm text-slate-900 px-8 py-4 rounded-full hover:bg-white transition-all shadow-md'>
+                                    Special Offers
+                                </button>
+                            </div>
+                            <div className='animate-bounce lg:hidden'>
+                                <ChevronDown className='w-8 h-8 text-slate-700 mx-auto' />
+                            </div>
                         </div>
-
+                        <div className='flex items-center justify-center lg;justify-end gap-10'>
+                            <img 
+                            src='/img/iphones-value-tradein-20240w9-1.png'
+                            alt='Premium Smartphones Collection'
+                            className='w-full h-auto min-h-screen object-contain drop-shadow-3xl'
+                            />
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
