@@ -3,30 +3,31 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="sticky top-0 bg-gray-300 p-6 border-b border-gray-300 rounded-xl max-w-full">
-      <div className="flex items-center max-w-7xl mx-auto w-full ml-7">
-        {/* App Title */}
-        <div className="flex items- centre gap-2">
-          <Apple className="w-8 h-8 text-black" />
-          <h1 className="font-semibold text-2xl tracking-wide text-black">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 p-4">
+      <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
+
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <Apple className="w-7 h-7 text-black" />
+          <h1 className="font-semibold text-lg tracking-wide text-black">
             GADGET STORE KE
           </h1>
         </div>
 
-        {/* Navigation Links */}
-        <nav className=" md:flex flex-1 justify-center space-x-10 font-semibold font-sans">
-          <a href="#home" className="hover:text-indigo-500">Store</a>
-          <a href="#about" className="hover:text-indigo-500">Featured</a>
-          <a href="#resources" className="hover:text-indigo-500">Accessories</a>
-          <a href="#resources" className="hover:text-indigo-500">Experience</a>
-          <a href="#resources" className="hover:text-cyan-500">Support</a>
+        {/* Navigation */}
+        <nav className="hidden md:flex flex-1 justify-center space-x-10 font-medium">
+          <a href="#home" className="hover:text-black/60 transition">Store</a>
+          <a href="#about" className="hover:text-black/60 transition">Featured</a>
+          <a href="#accessories" className="hover:text-black/60 transition">Accessories</a>
+          <a href="#experience" className="hover:text-black/60 transition">Experience</a>
+          <a href="#support" className="hover:text-black/60 transition">Support</a>
         </nav>
 
-        {/* Search, User, Cart */}
-        <div className="flex items-center gap-6 ">
-          <Search className="cursor-pointer hover:text-cyan-500" />
-          <User className="cursor-pointer hover:text-cyan-500" />
-          <button className="flex items-center gap-2 bg-amber-300 text-black font-semibold px-4 py-2 rounded-lg hover:bg-amber-400 transition">
+        {/* Icons */}
+        <div className="flex items-center gap-6">
+          <Search className="cursor-pointer hover:text-black/60" />
+          <User className="cursor-pointer hover:text-black/60" />
+          <button className="flex items-center gap-2 bg-black text-white font-medium px-4 py-2 rounded-full hover:bg-black/80 transition">
             <ShoppingCart className="w-5 h-5" />
             <span>Cart</span>
           </button>
