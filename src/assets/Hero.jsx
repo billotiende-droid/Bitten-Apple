@@ -1,6 +1,39 @@
-import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail } from 'lucide-react';
+import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail, PhoneIncoming } from 'lucide-react';
+import { useState} from 'react';
 
 function Hero() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const phoneImages = [
+
+    {url: 'https://images.unsplash.com/photo-1598665119100-2610d384b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwc21hcnRwaG9uZXxlbnwxfHx8fDE3NjUzNTY3Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Premium Collection'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1759505210684-7e9bbdecbd40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwaG9uZSUyMGRpc3BsYXl8ZW58MXx8fHwxNzY1MzU2NzY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Modern Display'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1676173646307-d050e097d181?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjUyOTg2MDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Advanced Technology'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1606299420579-baacab12fede?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBwaG9uZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzY1MzU2NzY5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Elegant Design'
+    }
+    ];
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % phoneImages.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + phoneImages.length) % phoneImages.legnth);    
+    }
+
+
+
+
     return (
         <section id="store" className="relative min-h-screen flex items-center overflow-hidden pt-24">
             <div className="absolute inset-0 bg-gradient-to-br: from-blue-50 via-amber-50 to-blue-100"></div>
@@ -95,8 +128,16 @@ function Hero() {
                                 <ChevronDown className='w-8 h-8 text-slate-700 mx-auto' />
                             </div>
                         </div>
-                        <div className='flex items-center justify-center lg;justify-end gap-10'>
-                            <img 
+                        {/* right side imaging */}
+                        <div className='relative flex items-center justify-center lg:justify-end'>
+                            {/* Carousel container*/}
+                            <div className='relative w-full max-w-lg'>
+                                {/*image display */} 
+                                <div className='relative overflow-hidden rounded-3xl'>
+
+                                </div>
+                            </div>
+                            <img   
                             src='/img/iphones-value-tradein-20240w9-1.png'
                             alt='Premium Smartphones Collection'
                             className='w-full h-auto min-h-screen object-contain drop-shadow-3xl'
