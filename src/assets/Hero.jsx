@@ -2,7 +2,7 @@ import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail } from 'lucide-react'
 
 function Hero() {
     return (
-        <section id="store" className="relative min-h-screen flex items-center overflow-hidden">
+        <section id="store" className="relative min-h-screen flex items-center overflow-hidden pt-24">
             <div className="absolute inset-0 bg-gradient-to-br: from-blue-50 via-amber-50 to-blue-100"></div>
 
             <div className="relative z-10 w-full">
@@ -16,7 +16,7 @@ function Hero() {
                                 <span className='text-slate-700'>Premium Smartphones. Latest Technology.</span>
                             </div>
 
-                            <h1 className='text-slate-900 mb-10'>
+                            <h1 className='text-slate-900 text-3xl lg:text-3xl font-semibold tracking-tight mb-8 leading-tigh'>
                                 Discover your perfect phone.
                             </h1>
 
