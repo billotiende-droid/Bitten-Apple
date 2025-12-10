@@ -134,14 +134,22 @@ function Hero() {
                             <div className='relative w-full max-w-lg'>
                                 {/*image display */} 
                                 <div className='relative overflow-hidden rounded-3xl'>
-
+                                    <div 
+                                      className='flex transition transform duration-500 ease-in-out'
+                                      style={{ transform: `translateX(-${currentSlide * 100}%)`}}
+                                      >
+                                        {phoneImages.map((phone, index) => (
+                                            <div key={index} className='w-full flex-shrink-0:'>
+                                                <img
+                                                   src={phone.url}
+                                                   alt={phone.title}
+                                                   className='w-full h-[600px] object-cover drop-shadow-2xl'
+                                                 />  
+                                        </div>           
+                                        ))}
+                                      </div>
                                 </div>
                             </div>
-                            <img   
-                            src='/img/iphones-value-tradein-20240w9-1.png'
-                            alt='Premium Smartphones Collection'
-                            className='w-full h-auto min-h-screen object-contain drop-shadow-3xl'
-                            />
                         </div>
                     </div>
                 </div>
