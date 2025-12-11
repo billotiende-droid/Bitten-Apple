@@ -1,4 +1,4 @@
-import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail, PhoneIncoming } from 'lucide-react';
+import { Sparkles, ChevronDown, Clock, MapPin, Phone, Mail, PhoneIncoming, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState} from 'react';
 
 function Hero() {
@@ -139,15 +139,48 @@ function Hero() {
                                       style={{ transform: `translateX(-${currentSlide * 100}%)`}}
                                       >
                                         {phoneImages.map((phone, index) => (
-                                            <div key={index} className='w-full flex-shrink-0:'>
+                                            <div key={index} className='w-full flex-shrink-0'>
                                                 <img
-                                                   src={phone.url}
-                                                   alt={phone.title}
-                                                   className='w-full h-[600px] object-cover drop-shadow-2xl'
+                                                src={phone.url}
+                                                alt={phone.title}
+                                                className='w-full h-[600px] object-cover drop-shadow-2xl'
                                                  />  
                                         </div>           
                                         ))}
                                       </div>
+                                </div>
+                                <button
+                                onClick={prevSlide}
+                                className='absolute left-4 top-1/2 -translate-y-12 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all hover:scale-110'
+                                aria-label='Previous phone'
+                                >
+                                    <ChevronLeft className='w-6 h-6 text-slate-900' />
+                                </button>
+                                <button
+                                onClick={nextSlide}
+                                className='absolute right-4 top-1/2 -translate-y-12 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all hover:scale-110'
+                                aria-label='Next phone'
+                                >
+                                    <ChevronRight className='w-6 h-6 text-slate-900' />
+                                </button>
+                                <div className='flex justify-center gap-2 mt-6'>
+                                    {phoneImages.map((_, index) =>(
+                                        <button
+                                        key={index}
+                                        onClick={() => setCurrentSlide(index)}
+                                        className={`w-3 h-3 rounded-full transition-all ${
+                                            currentSlide === index
+                                            ? `bg-slate-900 w-8`
+                                            : `bg-slate-400 hover:bg-slate-600`
+                                        }`}
+                                        aria-label={ `Go to slide ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                                <div className='text-center mt-4'>
+                                    <p className='text-slate-900 bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 inline-block shadow-md'>
+                                    {phoneImages[currentSlide].title}
+                                    </p>
                                 </div>
                             </div>
                         </div>
