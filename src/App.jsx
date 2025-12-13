@@ -1,6 +1,7 @@
 import React from  'react';
 import Header from './assets/Header.jsx';
 import Hero from './assets/Hero.jsx';
+import PhoneShowcase from './assets/PhoneShowcase.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         {/* Main content area */}
         <main className="max-w-6xl mx-auto px-4 py-10">
           <Hero />
+          <PhoneShowcase />
           {/* Add more sections here */}
         </main>
       </div>
