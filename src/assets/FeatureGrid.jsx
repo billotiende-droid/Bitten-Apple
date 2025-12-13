@@ -41,6 +41,27 @@ function FeatureGrid () {
                         Every detail engineered to perfection. From the moment you pick it up to years of daily use.
                     </p>
                 </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 ;g:grid-cols-4 gap-6'>
+                    {features.map((feature, index) => {
+                        const Icon = feature.icon;
+                        return (
+                            <div
+                            key={index}
+                            className='bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1'
+                            >
+                            <div className={`${feature.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}>
+                            <Icon className='w-6 h-6 text-white' />
+                            </div>
+                            <h3 className='text-slate-900 mb-2' >
+                                {feature.title}
+                            </h3>
+                            <p className='text-slate-600'>
+                                {feature.description}
+                            </p>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </section>
         
