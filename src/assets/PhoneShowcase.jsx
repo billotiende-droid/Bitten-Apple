@@ -105,8 +105,8 @@ function PhoneShowcase () {
                                 Crafted to Perfection
                             </h2>
                             <p className='text-white/90 mb-6'>
-                            Premium materials meet precision engineering, From aerospace-grade metals to
-                            scratch-resistant glassm every device is built to withstand daily life while
+                            Premium materials meet precision engineering. From aerospace-grade metals to
+                            scratch-resistant glass, every device is built to withstand daily life while
                             maintaining its stunning appearance.
                             </p>
                             <button className='bg-white text-slate-900 px-6 py-3 rounded-full hover:bg-white/90 transition-colors'>
