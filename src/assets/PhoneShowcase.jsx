@@ -94,11 +94,30 @@ function PhoneShowcase () {
                     alt='Lifestyle'
                     className='w-full h-full object-cover'
                     />
-
+                    <div className='absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent'></div>
+                    <div className='absolute bottom-0 left-0 right-0 p-12 text-white'>
+                        <div className='max-w-2xl'>
+                            <div className='inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4'>
+                            <Zap className='w-4 h-4' />
+                            <span>Premium Materials</span>
+                            </div>
+                            <h2 className='mb-4'>
+                                Crafted to Perfection
+                            </h2>
+                            <p className='text-white/90 mb-6'>
+                            Premium materials meet precision engineering, From aerospace-grade metals to
+                            scratch-resistant glassm every device is built to withstand daily life while
+                            maintaining its stunning appearance.
+                            </p>
+                            <button className='bg-white text-slate-900 px-6 py-3 rounded-full hover:bg-white/90 transition-colors'>
+                            Explore Design
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 
