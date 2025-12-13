@@ -35,7 +35,7 @@ function Hero() {
 
 
     return (
-        <section id="store" className="relative min-h-screen flex items-center overflow-hidden pt-24">
+        <section id="store" className="relative min-h-screen flex items-center overflow-hidden pt-20">
             <div className="absolute inset-0 bg-gradient-to-br: from-blue-50 via-amber-50 to-blue-100"></div>
 
             <div className="relative z-10 w-full">
@@ -73,7 +73,7 @@ function Hero() {
                                         
                                         {/* Location */}
                                         <div className='flex items-start gap-3'>
-                                            <div className='bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                            <div className='bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'>
                                                 <MapPin className='w-5 h-5 text-blue-600' />
                                             </div>
                                             <div>
@@ -84,7 +84,7 @@ function Hero() {
 
                                         {/* Hours */}
                                         <div className='flex items-start gap-3'>
-                                            <div className='bg-amber-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                            <div className='bg-amber-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'>
                                                 <Clock className='w-5 h-5 text-amber-600' />
                                             </div>
                                             <div>
@@ -93,7 +93,7 @@ function Hero() {
                                             </div>
                                         </div>
                                         <div className='flex items-start gap-3'>
-                                            <div className='bg-purple-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                            <div className='bg-purple-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'>
                                                 <Phone className='w-5 h-5 text-purple-600' />
                                             </div>
                                             <div>
@@ -102,7 +102,7 @@ function Hero() {
                                             </div>
                                         </div>
                                         <div className='flex items-start gap-3'>
-                                            <div className='bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0:'>
+                                            <div className='bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'>
                                                 <Mail className='w-5 h-5 text-green-600' />
                                             </div>
                                             <div>
@@ -129,9 +129,9 @@ function Hero() {
                             </div>
                         </div>
                         {/* right side imaging */}
-                        <div className='relative flex items-center justify-center lg:justify-end'>
+                        <div className='relative flex items-center justify-center lg:justify-end lg:ml-20'>
                             {/* Carousel container*/}
-                            <div className='relative w-full max-w-lg'>
+                            <div className='relative w-full max-w-xl'>
                                 {/*image display */} 
                                 <div className='relative overflow-hidden rounded-3xl'>
                                     <div 
@@ -143,7 +143,7 @@ function Hero() {
                                                 <img
                                                 src={phone.url}
                                                 alt={phone.title}
-                                                className='w-full h-[600px] object-cover drop-shadow-2xl'
+                                                className='w-full h-[550px] object-cover drop-shadow-2xl'
                                                  />  
                                         </div>           
                                         ))}
