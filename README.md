@@ -1,16 +1,121 @@
-# React + Vite
+# Bitten Apple - Premium Smartphone Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, visually stunning e-commerce landing page for premium smartphones built with Next.js 15, React 19, and Tailwind CSS 4.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: Next.js 15 (App Router)
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4 with CSS variables
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Package Manager**: npm
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+front-end/bitten-apple/
+├── app/
+│   ├── components/
+│   │   ├── Header.jsx        # Navigation header with links
+│   │   ├── Hero.jsx          # Main hero section with animated text
+│   │   ├── PhoneShowcase.jsx # Phone models showcase with pricing
+│   │   ├── FeatureGrid.jsx   # Product features grid display
+│   │   ├── Accessories.jsx   # Phone accessories section
+│   │   └── Experience.jsx    # User experience section
+│   ├── page.jsx              # Main landing page (entry point)
+│   ├── layout.jsx            # Root layout configuration
+│   ├── globals.css           # Global styles & Tailwind imports
+│   └── favicon.ico           # Site favicon
+├── public/
+│   └── img/                  # Static images (wallpapers, product images)
+├── package.json              # Dependencies & scripts
+├── next.config.js            # Next.js configuration
+├── postcss.config.cjs        # PostCSS configuration
+├── tailwind.config.*         # Tailwind CSS config (optional)
+└── .eslintrc.json            # ESLint configuration
+```
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18.17.0 or later
+- npm (comes with Node.js)
+
+### Installation
+
+```bash
+# Navigate to the project directory
+cd front-end/bitten-apple
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build
+
+```bash
+# Create production build
+npm run build
+```
+
+### Start Production Server
+
+```bash
+# After building, start the production server
+npm start
+```
+
+### Linting
+
+```bash
+# Run ESLint
+npm run lint
+```
+
+## 🎨 Features
+
+- **Responsive Design**: Fully responsive layout adapting to all screen sizes
+- **Glass Morphism**: Modern glass-effect UI elements with backdrop blur
+- **Smooth Animations**: Page elements animate smoothly using Framer Motion
+- **Interactive Components**: Interactive phone showcase with hover effects
+- **Navigation**: Fixed header with scroll-aware styling
+- **Footer**: Multi-section footer with social links
+
+## 📱 Components Overview
+
+| Component | Description |
+|-----------|-------------|
+| [`Header`](front-end/bitten-apple/app/components/Header.jsx) | Navigation bar with logo and menu links |
+| [`Hero`](front-end/bitten-apple/app/components/Hero.jsx) | Animated hero section with promotional text |
+| [`PhoneShowcase`](front-end/bitten-apple/app/components/PhoneShowcase.jsx) | Display of phone models with prices and "Buy Now" buttons |
+| [`FeatureGrid`](front-end/bitten-apple/app/components/FeatureGrid.jsx) | Grid layout showcasing product features |
+| [`Accessories`](front-end/bitten-apple/app/components/Accessories.jsx) | Phone accessories showcase section |
+| [`Experience`](front-end/bitten-apple/app/components/Experience.jsx) | Customer experience/benefits section |
+
+## 🎯 Future Improvements
+
+- [ ] Add shopping cart functionality
+- [ ] Implement product detail pages
+- [ ] Add user authentication
+- [ ] Integrate payment gateway
+- [ ] Add product filtering and search
+- [ ] Implement dark/light theme toggle
+
+## 📄 License
+
+This project is for demonstration purposes.
+
+## 👤 Author
+
+GADGET STORE KE - Experience Innovation
