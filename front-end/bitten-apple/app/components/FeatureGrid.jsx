@@ -30,7 +30,7 @@ function FeatureGrid() {
 
   return (
     <section className="py-20">
-      <div className="max-7x1 mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-slate-900 mb-4">Built to last</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ function FeatureGrid() {
             up to years of daily use.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 ;g:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
