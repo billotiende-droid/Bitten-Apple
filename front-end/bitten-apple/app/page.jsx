@@ -4,6 +4,7 @@ import PhoneShowcase from "./components/PhoneShowcase";
 import FeatureGrid from "./components/FeatureGrid";
 import Accessories from "./components/Accessories";
 import Experience from "./components/Experience";
+import LeftSidebar from "./components/LeftSidebar"; 
 
 export default function Home() {
   return (
@@ -15,16 +16,19 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
+        <div className="w-full px-4 pt-12 pb-16 lg:px-0 lg:pt-16">
+        <div className="grid lg:grid-cols-[288px_minmax(0,1fr)] gap-8 items-start">
+          <LeftSidebar />
 
-        <main className="max-w-6xl mx-auto px-4 py-10">
+        <main className="w-full max-w-6xl mx-auto px-0 lg:px-4 pb-10">
           <Hero />
           <PhoneShowcase />
           <FeatureGrid />
           <Accessories />
           <Experience />
-          <footer className="bg-white/60 backdrop-blur-sm mt-20 py-12">
+          <footer className="bg-white/60 backdrop-blur-sm mt-16 md:mt-20 py-8 md:py-12">
             <div className="max-w-7xl mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
                 <div>
                   <h3 className="text-slate-900 mb-4">Shop</h3>
                   <ul className="space-y-2 text-slate-600">
@@ -112,6 +116,8 @@ export default function Home() {
             </div>
           </footer>
         </main>
+        </div>
+        </div>
       </div>
     </div>
   );
