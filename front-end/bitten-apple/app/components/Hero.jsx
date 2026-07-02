@@ -45,11 +45,11 @@ function Hero() {
   };
 
   return (
-    <section id="store" className="relative min-h-screen flex overflow-hidden pt-20">
+    <section id="store" className="relative min-h-screen flex overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
 
       <div className="relative z-10 w-full">
-        <div className="max-w-7xl mx-auto px-4 py-32">
+        <div className="max-w-7xl mx-auto px-4 pt-0 pb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg text-black">
@@ -59,11 +59,11 @@ function Hero() {
                 </span>
               </div>
 
-              <h1 className="text-slate-900 text-3xl lg:text-3xl font-semibold tracking-tight mb-8 leading-tigh">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 leading-tight">
                 Discover your perfect phone.
               </h1>
 
-              <p className="text-slate-700 mb-10">
+              <p className="text-base md:text-lg text-slate-700 mb-10">
                 Explore our curated collection of premium smartphones featuring
                 cutting-edge technology, stunning displays, and powerful
                 performance. Whether you&apos;re a creative professional, mobile
@@ -134,14 +134,14 @@ function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-4 flex-wrap mb-8">
-                <button className="bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button className="bg-slate-900 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   Shop Now
                 </button>
-                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-8 py-4 rounded-full hover:bg-white transition-all shadow-md">
+                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white transition-all shadow-md">
                   View Collection
                 </button>
-                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-8 py-4 rounded-full hover:bg-white transition-all shadow-md">
+                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white transition-all shadow-md">
                   Special Offers
                 </button>
               </div>
@@ -162,7 +162,7 @@ function Hero() {
                         <img
                           src={phone.url}
                           alt={phone.title}
-                          className="w-full h-[550px] object-cover drop-shadow-2xl"
+                          className="w-full h-[300px] md:h-[450px] lg:h-[550px] object-cover"
                         />
                       </div>
                     ))}
