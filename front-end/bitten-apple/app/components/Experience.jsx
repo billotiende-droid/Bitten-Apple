@@ -4,8 +4,8 @@ function Experience() {
   return (
     <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[600px]">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] lg:h-[600px]">
             <img
               src="/img/759059c2f97c677e179494068131682c.jpg"
               alt="Phone Experience"
@@ -24,8 +24,8 @@ function Experience() {
             </div>
           </div>
 
-          <div className="grid gap-8">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+          <div className="grid gap-6 md:gap-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all">
               <div className="bg-blue-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
@@ -38,7 +38,7 @@ function Experience() {
               </button>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all">
               <div className="bg-purple-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <Headphones className="w-6 h-6 text-white" />
               </div>
@@ -53,20 +53,20 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-center shadow-2xl">
-          <MessageCircle className="w-12 h-12 text-white mx-auto mb-4" />
-          <h2 className="text-white mb-4">Stay in the loop</h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+        <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 text-center shadow-2xl">
+          <MessageCircle className="w-10 h-10 md:w-12 md:h-12 text-white mx-auto mb-4" />
+          <h2 className="text-xl md:text-2xl text-white mb-4">Stay in the loop</h2>
+          <p className="text-white/80 mb-6 md:mb-8 max-w-2xl mx-auto">
             Be the first to know about new releases, exclusive offers and the
             latest from Gadget Store.
           </p>
-          <div className="flex gap-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full bg-white/10 text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-white/40"
+              className="flex-1 px-4 md:px-6 py-3 md:py-4 rounded-full bg-white/10 text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-white/40"
             />
-            <button className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-white/90 transition-colors whitespace-nowrap">
+            <button className="bg-white text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white/90 transition-colors whitespace-nowrap w-full sm:w-auto">
               Sign Up
             </button>
           </div>
