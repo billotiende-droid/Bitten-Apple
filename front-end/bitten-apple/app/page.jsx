@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
-        <div className="w-full px-4 pt-12 pb-16 lg:px-0 lg:pt-16">
+        <div className="w-full px-4 pt-12 pb-16 lg:px-4 lg:pt-16">
         <div className="grid lg:grid-cols-[288px_minmax(0,1fr)] gap-8 items-start">
           <LeftSidebar />
 
