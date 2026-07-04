@@ -76,64 +76,6 @@ function Hero() {
                 everyday essentials, discover innovation that fits your style and
                 budget.
               </p>
-
-              <div className="mb-10">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-                  <h3 className="text-slate-900 mb-4">Visit Our Store.</h3>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <p className="text-slate-900">
-                          Kimathi Chambers, 2nd Floor
-                        </p>
-                        <p className="text-slate-600">
-                          Kimathi Street, Moi Avenue, Nairobi Kenya 00100
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="bg-amber-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-5 h-5 text-amber-600" />
-                      </div>
-                      <div>
-                        <p className="text-slate-900">
-                          Monday - Friday: 9:00 AM - 8:00 PM
-                        </p>
-                        <p className="text-slate-600">
-                          Saturday: 9:00 AM - 12:00 PM
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-purple-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-purple-600" />
-                      </div>
-                      <div>
-                        <p className="text-slate-900">0708-797-926 </p>
-                        <p className="text-slate-600">
-                          Call us for expert advice
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-green-600" />
-                      </div>
-                      <div>
-                        <p className="text-slate-900">hello@gadgetstore.com</p>
-                        <p className="text-slate-600">
-                          Get in touch with our team
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button className="bg-slate-900 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   Shop Now
