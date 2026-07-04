@@ -5,6 +5,7 @@ import FeatureGrid from "./components/FeatureGrid";
 import Accessories from "./components/Accessories";
 import Experience from "./components/Experience";
 import LeftSidebar from "./components/LeftSidebar"; 
+import RightSidebar from "./components/RightSidebar";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
-        <div className="w-full px-4 pt-12 pb-16 lg:px-4 lg:pt-16">
-        <div className="grid lg:grid-cols-[288px_minmax(0,1fr)] gap-8 items-start">
+        
+        <div className="w-full px-4 pt-12 pb-16 lg:pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[288px_1fr_288px] gap-8 items-start">
           <LeftSidebar />
 
         <main className="w-full max-w-6xl mx-auto px-0 lg:px-4 pb-10">
@@ -116,6 +118,7 @@ export default function Home() {
             </div>
           </footer>
         </main>
+        <RightSidebar />
         </div>
         </div>
       </div>
