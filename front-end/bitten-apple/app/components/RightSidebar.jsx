@@ -1,3 +1,4 @@
+"use client";
 import { MapPin, Clock, Phone, Mail, Navigation } from "lucide-react";
 
 
@@ -36,9 +37,30 @@ export default function RightSidebar() {
                 </div>
             </div>
             </div>
+            <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-slate-400 mt-0.5 flex-shrink-0" />
+                <div>
+                    <p className="text-sm font-semibold text-slate-900">Phone</p>
+                    <a
+                        href="tel:+254708797926"
+                        className="text-xs text-blue-600 hover:underline transition"
+                    > 
+                        +254 708-797-926
+                    </a>
+                </div>
+            </div>
+            <div className="mt-6 pt-5 border-t border-slate-200/60">
+            <button
+                onClick={handleDirectionsClick}
+                className="w-full bg-slate-900 text-white text=sm font-medium py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-800 shadow-md transition-group"
+            >
+                <Navigation className="w-4 h-4 text-amber-400 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
+                Get Directions
+            </button>
+            </div>
             </div>
             </aside>
-    )
+    );
 
 
 }
