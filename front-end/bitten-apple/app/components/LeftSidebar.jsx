@@ -48,6 +48,37 @@ export default function LeftSidebar() {
             ))} 
             </div>
             </div>
+            <div className="sticky top-[420px] bg-white/60 backdrop-blur-md border border-slate-200/40 rounded-2xl p-6 shadow-sm">
+            <h3 className="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-4">
+                Shop by Category
+            </h3>
+            <div className="space-y-2">
+                {categories.map((category)=>{
+                    const Icon = category.icon;
+                    return (
+                        <button 
+                            key={category.name}
+                            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-100/80 transition group"
+                        >
+                            <div className="flex items-center gap-3">
+                                <Icon className="w-4 h-4 text-slate-600 group-hover:text-slate-900"/>
+                                <span className="text-sm text-slate-700 group-hover:text-slate-900">
+                                    {category.name}
+                                    </span> 
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    {category.badge && (
+                                        <span className="inline-block px-2 py-0.5 bg-gradient-to-r from-orange-400 to-red-500 text-white text-[10px] font-bold rounded-full">
+                                           {category.badge} 
+                                        </span>
+                                    )}
+                                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-slate-600"/>
+                                    </div>
+                        </button>
+                    );
+                })}
+            </div>
+            </div>
         </aside>
     )  
 }
