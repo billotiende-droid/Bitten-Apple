@@ -1,12 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+
 import {
   Sparkles,
   ChevronDown,
-  Clock,
-  MapPin,
-  Phone,
-  Mail,
   ChevronLeft,
   ChevronRight
 } from "lucide-react";
@@ -14,6 +12,7 @@ import { useState } from "react";
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const phoneImages = [
     {
@@ -44,108 +43,118 @@ function Hero() {
     );
   };
 
-  return (
-    <section id="store" className="relative min-h-screen flex overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
+  useEffect(() => {
+  // If the user hovers over the image, do not start the timer
+  if (isHovered) return;
 
-      <div className="relative z-10 w-full">
-        <div className="max-w-7xl mx-auto px-4 pt-0 pb-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+  const interval = setInterval(() => {
+    nextSlide();
+  }, 4000); // Changes image every 4 seconds
+
+  return () => clearInterval(interval);
+}, [currentSlide, isHovered]);
+
+  return (
+    <section id="store" className="relative w-full overflow-hidden py-6 md:py-12">
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Side Panel: Exact Copy & Typography spacing from gadhethero1.png */}
+          <div className="flex flex-col space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg text-black">
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span className="text-slate-700">
+              <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-md text-black">
+                <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                <span className="text-slate-700 text-xs font-semibold uppercase tracking-wider">
                   Premium Smartphones. Latest Technology.
                 </span>
               </div>
-
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 leading-tight">
-                Discover your perfect phone.
-              </h1>
-
-              <p className="text-base md:text-lg text-slate-700 mb-10">
-                Explore our curated collection of premium smartphones featuring
-                cutting-edge technology, stunning displays, and powerful
-                performance. Whether you&apos;re a creative professional, mobile
-                gamer, or everyday user, we have the perfect device to elevate
-                your digital lifestyle.
-              </p>
-
-              <p className="text-slate-600 mb-10">
-                From flagship powerhouses with pro-grade cameras to sleek
-                everyday essentials, discover innovation that fits your style and
-                budget.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="bg-slate-900 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                  Shop Now
-                </button>
-                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white transition-all shadow-md">
-                  View Collection
-                </button>
-                <button className="bg-white/90 backdrop-blur-sm text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white transition-all shadow-md">
-                  Special Offers
-                </button>
-              </div>
-              <div className="animate-bounce lg:hidden">
-                <ChevronDown className="w-8 h-8 text-slate-700 mx-auto" />
-              </div>
             </div>
 
-            <div className="relative flex items-center justify-center lg:justify-end lg:ml-20">
-              <div className="relative w-full max-w-xl">
-                <div className="relative overflow-hidden rounded-3xl">
-                  <div
-                    className="flex transition transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                  >
-                    {phoneImages.map((phone, index) => (
-                      <div key={index} className="w-full flex-shrink-0">
-                        <img
-                          src={phone.url}
-                          alt={phone.title}
-                          className="w-full h-[300px] md:h-[450px] lg:h-[550px] object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-none">
+              Discover your <br className="hidden lg:inline" /> perfect phone.
+            </h1>
+
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
+              Explore our curated collection of premium smartphones featuring
+              cutting-edge technology, stunning displays, and powerful
+              performance.
+            </p>
+
+            {/* Premium action button layouts mapped directly from gadhethero1.png */}
+            <div className="flex flex-wrap gap-4 pt-2">
+              <button className="px-8 py-3.5 bg-[#0070e3] hover:bg-blue-600 text-white font-medium rounded-full shadow-sm hover:shadow transition duration-200">
+                Shop Now
+              </button>
+              <button className="px-8 py-3.5 bg-[#1d1d1f] hover:bg-slate-800 text-white font-medium rounded-full shadow-sm hover:shadow transition duration-200">
+                Compare Models
+              </button>
+            </div>
+            
+            <div className="animate-bounce md:hidden pt-4">
+              <ChevronDown className="w-6 h-6 text-slate-700 mx-auto" />
+            </div>
+          </div>
+
+          {/* Right Side Panel: Carousel Framework tailored with a clean rounded box shape */}
+          <div className="relative flex items-center justify-center w-full">
+            <div className="relative w-full max-w-xl">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <div
+                  className="flex transition transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {phoneImages.map((phone, index) => (
+                    <div key={index} className="w-full flex-shrink-0">
+                      <img
+                        src={phone.url}
+                        alt={phone.title}
+                        className="w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover object-center"
+                      />
+                    </div>
+                  ))}
                 </div>
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-4 top-1/2 -translate-y-12 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all hover:scale-110"
-                  aria-label="Previous phone"
-                >
-                  <ChevronLeft className="w-6 h-6 text-slate-900" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-4 top-1/2 -translate-y-12 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all hover:scale-110"
-                  aria-label="Next phone"
-                >
-                  <ChevronRight className="w-6 h-6 text-slate-900" />
-                </button>
-                <div className="flex justify-center gap-2 mt-6">
+              </div>
+
+              {/* Navigation Elements */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all hover:scale-105"
+                aria-label="Previous phone"
+              >
+                <ChevronLeft className="w-5 h-5 text-slate-900" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all hover:scale-105"
+                aria-label="Next phone"
+              >
+                <ChevronRight className="w-5 h-5 text-slate-900" />
+              </button>
+              
+              {/* Pagination indicators and label badge */}
+              <div className="flex justify-between items-center mt-4 px-2">
+                <div className="flex gap-1.5">
                   {phoneImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all ${
+                      className={`h-2 rounded-full transition-all duration-300 ${
                         currentSlide === index
-                          ? "bg-slate-900 w-8"
-                          : "bg-slate-400 hover:bg-slate-600"
+                          ? "bg-slate-900 w-6"
+                          : "bg-slate-300 hover:bg-slate-400 w-2"
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
                 </div>
-                <div className="text-center mt-4">
-                  <p className="text-slate-900 bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 inline-block shadow-md">
-                    {phoneImages[currentSlide].title}
-                  </p>
-                </div>
+                <p className="text-xs font-medium text-slate-800 bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-sm">
+                  {phoneImages[currentSlide].title}
+                </p>
               </div>
+
             </div>
           </div>
+
         </div>
       </div>
     </section>
