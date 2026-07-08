@@ -108,6 +108,7 @@ export default function LoginPage() {
                 >
                     {loading ? 'Signing In...': 'Sign In'}
                 </button>
+                </form>
                 <div className='relative my-6 flex items-center justify-center'>
                     <div className='absolute inset-0 flex items-center'>
                         <div className='w-full border-t border-slate-200'></div>
@@ -126,14 +127,23 @@ export default function LoginPage() {
                         <FaInstagram size={22} />
                        </button>
                 </div>
-                
-            </form>
+                <div className='text-center space-y-3 text-sm'>
+                    <p className='text-slate-500'>
+                        Don't have an account?{''}
+                        <button className='font-semibold text-amber-600 hover:text-amber-700 transition-colors'>
+                            Sign Up
+                        </button>
+                    </p>
+                    <p className='text-slate-400 text=xs'>OR</p>
+                    <button
+                      onClick={() => router.push('/')}
+                      className='font-medium text-slate-600 hover:text-slate-900 transition-color'
+                    >
+                        Continue as a <span className='hover:underline'>guest</span>
+                    </button>  
+                </div>
             </div>
-            </div>         
-        </div>
-    
-
-    )
-
-
+        </div>         
+    </div>
+     );
     }
