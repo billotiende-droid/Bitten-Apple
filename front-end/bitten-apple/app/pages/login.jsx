@@ -63,6 +63,40 @@ export default function LoginPage() {
                 {error}
             </div>
             )}
+            <form onSubmit={handleSubmit} className='space-y-5'>
+                <div>
+                    <label className='block text-sm font-medium text-slate-700'>Email</label>
+                    <input
+                        type='email'
+                        required
+                        placeholder='example@gmail.com'
+                        className='w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all'
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value})}
+                        />
+                </div>
+
+                <div>
+                    <label className='block text-sm font-medium text-slate-700 mb-1'>Password</label>
+                    <div className='relative'>
+                        <input
+                            type={showPassword ? 'text' : 'password'}
+                            required
+                            placeholder='.........'
+                            className='w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all pr-12'
+                            value={formData.password}
+                            onChange={(e) =>setFormData ({...formData, password: e.target.value})}
+                        />
+                        <button
+                            type='button'
+                            onClick={() => setShowPassword(!showPassword)}
+                            className='absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors'
+                        >
+                            {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18}/>}
+                        </button>
+                    </div>
+                </div>
+            </form>
             </div>
             </div>         
         </div>
