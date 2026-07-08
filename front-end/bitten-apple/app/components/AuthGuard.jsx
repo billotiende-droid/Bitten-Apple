@@ -24,6 +24,5 @@ export default function AuthGuard({ children, requiredRole }) {
             }
         }
 
-    
-    })
+    },[status, role, router, requiredRole]);
 }
