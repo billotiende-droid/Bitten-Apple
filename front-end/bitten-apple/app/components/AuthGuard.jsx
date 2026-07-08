@@ -25,4 +25,14 @@ export default function AuthGuard({ children, requiredRole }) {
         }
 
     },[status, role, router, requiredRole]);
+
+    if (status === 'loading') {
+        return <div>Loading...</div>;
+    }
+
+    if(!session || (requiredRole && role !== requiredRole)) {
+        return null;
+    }
+    
+    return children;
 }
