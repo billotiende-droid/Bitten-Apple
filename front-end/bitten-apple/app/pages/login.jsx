@@ -96,6 +96,37 @@ export default function LoginPage() {
                         </button>
                     </div>
                 </div>
+                <div className='flex justify-end'>
+                    <button type='buttom' className='text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors'>
+                        Forgot Password?
+                    </button>
+                </div>
+                <button 
+                   type='submit'
+                   disabled={loading}
+                   className='w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/20 active:scale-[0.99] transition-all disabled:opacity-50'
+                >
+                    {loading ? 'Signing In...': 'Sign In'}
+                </button>
+                <div className='relative my-6 flex items-center justify-center'>
+                    <div className='absolute inset-0 flex items-center'>
+                        <div className='w-full border-t border-slate-200'></div>
+                    </div>
+                    <span className='relative bg-white px-4 text-sx uppercase text-slate-400 text-wider'>
+                        Or Sign in with
+                    </span>
+                </div>
+                <div className='flex justify-center gap-4 mb-6'>
+                    <button
+                       onClick={() => signIn('facebook')}
+                       className='p-3 border border-slate-200 rounded-full hover:bg-slate-50 text-[#1877F2] transition-colors shadow-sm'>
+                        <FaFacebook size={22} />
+                       </button>
+                       <button className='p-3 border border-slate-200 rounded-full hover:bg-slate-50 text-[#E1306C] transition-colors shadow-sm'>
+                        <FaInstagram size={22} />
+                       </button>
+                </div>
+                
             </form>
             </div>
             </div>         
