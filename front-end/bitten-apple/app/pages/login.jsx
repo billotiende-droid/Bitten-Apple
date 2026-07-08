@@ -51,13 +51,24 @@ export default function LoginPage() {
                 </p>
             </div>
             <p className='text-sm text-slate-500 z-10'>© 2026 Gadget Store. All rights reserved</p>
-            </div>            
+            </div>   
+            <div className='w-full lg:w-1/2 flex flex-col justify-center items-center px-6 py-12 sm:px-12'>
+            <div className='"w-full max-w-md bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100'>
+            <div className='text-center mb-8'>
+                <h2 className='text-3xl font-bold tracking-tight text-slate-900'>Sign In</h2>
+                <p className='text-sm text-slare-500 mt-2'>Welcome back! Please enter your details.</p>
+            </div>
+            {error && (
+            <div className='mb-4 p-3 text-sm bg-red-50 text-red-600 rounded-lg border border-red-200'>
+                {error}
+            </div>
+            )}
+            </div>
+            </div>         
         </div>
+    
 
     )
-   
-
-
 
 
     }
