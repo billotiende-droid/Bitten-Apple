@@ -19,9 +19,17 @@ export const authOptions = {
                 });
 
                 const user = await res.json();
-                
 
+                if (res.ok && user) {
+                    return user;
+                }
+
+                return null
+                
             }
         })
-    ]
-}
+    ],
+};
+
+const handler = NextAUth(authOptions);
+export { handler as GET, handler as POST}
