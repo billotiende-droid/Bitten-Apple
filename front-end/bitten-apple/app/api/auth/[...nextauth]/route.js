@@ -29,7 +29,30 @@ export const authOptions = {
             }
         })
     ],
+    callbacks: {
+        async jwt({token, user}) {
+            if(user) {
+                token.role = user.role
+            }
+            return token;
+
+        },
+
+        async session({session, token}) {
+            if(session.user.token) {
+                session.user.role = token.role
+            }
+            return session;
+
+        },
+
+        },
+        pages: {
+            signIn:'/login' 
+        }
+
+    
 };
 
-const handler = NextAUth(authOptions);
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST}
