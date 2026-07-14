@@ -28,4 +28,20 @@ class Customer(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime, server_default=text("TIMEZONE('utc', now())"), onupdate=text("TIMEZONE('utc', now())"))
 
 
+class Category(Base):
+    __tablename__="categories"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    name: Mapped[str] = mapped_column(String(255))
+    desc: Mapped[Optional[str]] = mapped_column(String(255))
+
+
+class Brand(Base):
+    __tablename__ = "brands"
+    
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    name: Mapped[str] = mapped_column(String(255))
+    slug: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    logo_url: Mapped[Optional[str]] = mapped_column(String(255))
+
 
