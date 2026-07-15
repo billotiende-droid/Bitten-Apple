@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
+from sqlalchemy import text
 
 
 # Import async engine for connection verification on start up
@@ -18,7 +19,7 @@ async def lifespan(app: FastAPI):
     try:
         async with engine.begin() as conn:
             # query to make sure db is responding
-            await conn.execute("SELECT 1")
+            await conn.execute(text("SELECT 1"))
             print("Db connection established successfully")
     except Exception as e:
         print(f"Failed to connect to the database on startup: {e}")
