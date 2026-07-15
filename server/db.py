@@ -24,3 +24,17 @@ AsyncSessionLocal = async_sessionmaker(
     expire_on_commit=False,     # Prevents SQLAlchemy from expiring attributes after commit(vital for async)
 )
 
+# FastAPI Dependency Injection Generator
+# Yields a session per request and guarantees proper cleanup/rollback on failure
+
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSessionLocal() as session:
+        try:
+            yield session
+            await session.commit()  #Optional: Automatically commits transactions if no error is raised
+        except Exception:
+            await session.rollback()       # Safe Fall Back on endpoint failures
+            raise
+        finally:
+            await session.close()    
+
