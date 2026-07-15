@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional, List
 from sqlalchemy import String, Integer, Boolean, ForeignKey, DateTime, text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from database import Base
+from db import Base
 
 class Admin(Base):
     __tablename__="admins"
