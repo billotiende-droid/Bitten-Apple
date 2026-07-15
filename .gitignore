@@ -39,3 +39,5 @@ out/
 # Ignore images folder
 public/img/
 **/public/img/
+
+.venv/
