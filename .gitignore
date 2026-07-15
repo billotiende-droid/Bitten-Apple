@@ -40,4 +40,6 @@ out/
 public/img/
 **/public/img/
 
+# server
 .venv/
+.env
